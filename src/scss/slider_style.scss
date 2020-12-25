@@ -11,7 +11,7 @@
   padding: 0;
   border: none;
   transition-duration: 0.3s;
-  background: url("img/labels/go.svg");
+  background: url("../img/labels/go.svg");
 
   &:focus {
     outline: none;
@@ -22,11 +22,11 @@
 
 .wrapper {
   //padding: 30px;
-  min-height: 100%;
+  //min-height: 100%;
   background-color: $grey;
-  max-width: 1120px;
+  //max-width: 1120px;
   width: 100%;
-  margin: 0 auto;
+  //margin: 0 auto;
 
   &__title {
     padding: 16px;
@@ -77,7 +77,7 @@
       height: 72px;
       border-radius: 6px;
       border: 1px solid $darkgrey;
-      background: white url("img/labels/go.svg") no-repeat 92%;
+      background: white url("../img/labels/go.svg") no-repeat 92%;
       margin-right: 16px;
       transition-duration: 0.3s;
       transition-property: background, box-shadow;
@@ -92,7 +92,7 @@
       }
 
       &:hover {
-        background: white url("img/labels/go--hover.svg") no-repeat 92%;
+        background: white url("../img/labels/go--hover.svg") no-repeat 92%;
         //filter: drop-shadow(0 5px 1px #EAEAEA);
         box-shadow: 0 5px 5px 1px #EAEAEA;
       }
@@ -153,35 +153,35 @@
     //}
     //}
     &__image-lenovo {
-      background: url("img/labels/lenovo.png") no-repeat 12%;
+      background: url("../img/labels/lenovo.png") no-repeat 12%;
     }
 
     &__image-apple {
-      background: url("img/labels/apple.png") no-repeat 12%;
+      background: url("../img/labels/apple.png") no-repeat 12%;
     }
 
     &__image-acer {
-      background: url("img/labels/acer.png") no-repeat 12%;
+      background: url("../img/labels/acer.png") no-repeat 12%;
     }
 
     &__image-samsung {
-      background: url("img/labels/samsung.png") no-repeat 12%;
+      background: url("../img/labels/samsung.png") no-repeat 12%;
     }
 
     &__image-sony {
-      background: url("img/labels/sony.png") no-repeat 12%;
+      background: url("../img/labels/sony.png") no-repeat 12%;
     }
 
     &__image-bosh {
-      background: url("img/labels/bosh.png") no-repeat 12%;
+      background: url("../img/labels/bosh.png") no-repeat 12%;
     }
 
     &__image-viewsonic {
-      background: url("img/labels/viewsonic.png") no-repeat 12%;
+      background: url("../img/labels/viewsonic.png") no-repeat 12%;
     }
 
     &__image-hp {
-      background: url("img/labels/hp.png") no-repeat 12%;
+      background: url("../img/labels/hp.png") no-repeat 12%;
     }
   }
 
@@ -219,12 +219,12 @@
   .read-more-input ~ .read-more:after {
     content: 'Показать все';
     padding-left: 27px;
-    background: url("img/expand.svg") no-repeat 0 -1px;
+    background: url("../img/expand.svg") no-repeat 0 -1px;
   }
 
   .read-more-input:checked ~ .read-more:after {
     content: 'Скрыть';
-    background: url("img/expand-up.svg") no-repeat 0 0;
+    background: url("../img/expand-up.svg") no-repeat 0 0;
   }
 
 }
