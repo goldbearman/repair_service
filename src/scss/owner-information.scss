@@ -1,0 +1,41 @@
+.owner-information {
+  background-color: $grey;
+  max-width: 1120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: $text;
+  margin: 0 auto ;
+  padding: 47px 32px 15px;
+
+  @media (min-width: 768px) {
+    padding: 67px 32px 15px;
+  }
+
+
+  &__items {
+    width: 30%;
+    padding-bottom: 16px;
+    @media (max-width: 768px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  &__confidentiality{
+      text-align: center;
+  }
+
+  &__availability{
+    text-align: right;
+    @media (max-width: 768px) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
