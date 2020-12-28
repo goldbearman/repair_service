@@ -10,7 +10,7 @@ export let mySwiper;
 
 export function mobileSlider() {
   if (window.innerWidth < 768 && slider.dataset.mobile == 'false') {
-    mySwiper = new Swiper('.image-slider', {
+    mySwiper = new Swiper('.swiper-container', {
       // If we need pagination
       pagination: {
         el: '.swiper-pagination',
