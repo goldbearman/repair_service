@@ -35,7 +35,7 @@ export function mobileSlider() {
     slider.dataset.mobile = 'false';
 
     if (slider.classList.contains('swiper-container-initialized')) {
-      mySwiper.destroy();
+      mySwiper.destroy;
     }
   }
 }
@@ -45,4 +45,21 @@ window.addEventListener('resize', () => {
     mobileSlider();
 });
 
-console.log('Works!');
+document.querySelector('.sidebar-logo__burger').addEventListener('click', function (evnt) {
+  evnt.preventDefault();
+  document.querySelector('.sidebar').classList.add('sidebar--active');
+  document.querySelector('.burger-menu').classList.add('burger-menu--active');
+});
+
+
+document.querySelector('.burger-logo__item').addEventListener('click', function (evnt) {
+  evnt.preventDefault();
+  document.querySelector('.sidebar').classList.remove('sidebar--active');
+  document.querySelector('.burger-menu').classList.remove('burger-menu--active');
+});
+
+document.querySelector('.burger-menu__overlay').addEventListener('click', function (evnt) {
+  evnt.preventDefault();
+  document.querySelector('.sidebar').classList.remove('sidebar--active');
+  document.querySelector('.burger-menu').classList.remove('burger-menu--active');
+});

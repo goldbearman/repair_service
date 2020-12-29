@@ -156,7 +156,13 @@
         background: $button-border-hover url("../img/dropdown.png") no-repeat 88%;
         padding: 8px 41px 8px 12px;
         border: none;
+        transition-duration: 0.3s;
         font-family: "TTLakes", sans-serif;
+
+
+        &:hover{
+          background: $highlighter url("../img/dropdown.png") no-repeat 88%;
+        }
       }
     }
 
