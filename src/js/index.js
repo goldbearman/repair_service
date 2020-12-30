@@ -45,21 +45,42 @@ window.addEventListener('resize', () => {
     mobileSlider();
 });
 
-document.querySelector('.sidebar-logo__burger').addEventListener('click', function (evnt) {
-  evnt.preventDefault();
-  document.querySelector('.sidebar').classList.add('sidebar--active');
-  document.querySelector('.burger-menu').classList.add('burger-menu--active');
-});
+//------------------- Боковые меню -----------------------------------
 
 
-document.querySelector('.burger-logo__item').addEventListener('click', function (evnt) {
-  evnt.preventDefault();
-  document.querySelector('.sidebar').classList.remove('sidebar--active');
-  document.querySelector('.burger-menu').classList.remove('burger-menu--active');
-});
+openMenu('.sidebar-logo__burger', '.sidebar');
+openMenu('.contact-icons__call', '.modal-feedback');
+openMenu('.contact__call', '.modal-feedback');
+
+closeMenu('.burger-logo__item', '.sidebar');
+closeMenu('.modal-feedback__button', '.modal-feedback');
+
 
 document.querySelector('.burger-menu__overlay').addEventListener('click', function (evnt) {
   evnt.preventDefault();
   document.querySelector('.sidebar').classList.remove('sidebar--active');
   document.querySelector('.burger-menu').classList.remove('burger-menu--active');
+  document.querySelector('.modal-feedback').classList.remove('modal-feedback--active');
 });
+
+function openMenu(selectorButton, selectorMenu) {
+  let selectorMenuActive = selectorMenu.trim() + '--active';
+  selectorMenuActive = selectorMenuActive.slice(1);
+  document.querySelector(selectorButton).addEventListener('click', function (evnt) {
+    evnt.preventDefault();
+    document.querySelector(selectorMenu).classList.add(selectorMenuActive);
+    document.querySelector('.burger-menu').classList.add('burger-menu--active');
+  })
+}
+
+function closeMenu(selectorButton, selectorMenu) {
+  let selectorMenuActive = selectorMenu.trim() + '--active';
+  selectorMenuActive = selectorMenuActive.slice(1);
+  document.querySelector(selectorButton).addEventListener('click', function (evnt) {
+    evnt.preventDefault();
+    document.querySelector(selectorMenu).classList.remove(selectorMenuActive);
+    document.querySelector('.burger-menu').classList.remove('burger-menu--active');
+  })
+}
+
+
