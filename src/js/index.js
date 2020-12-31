@@ -49,11 +49,14 @@ window.addEventListener('resize', () => {
 
 
 openMenu('.sidebar-logo__burger', '.sidebar');
-openMenu('.contact-icons__call', '.modal-feedback');
-openMenu('.contact__call', '.modal-feedback');
+openMenu('.contact-icons__call', '.modal-call');
+openMenu('.contact-icons__chat', '.modal-feedback');
+openMenu('.contact__chat', '.modal-feedback');
+openMenu('.contact__call', '.modal-call');
 
 closeMenu('.burger-logo__item', '.sidebar');
 closeMenu('.modal-feedback__button', '.modal-feedback');
+closeMenu('.modal-call__button', '.modal-call');
 
 
 document.querySelector('.burger-menu__overlay').addEventListener('click', function (evnt) {
@@ -61,6 +64,7 @@ document.querySelector('.burger-menu__overlay').addEventListener('click', functi
   document.querySelector('.sidebar').classList.remove('sidebar--active');
   document.querySelector('.burger-menu').classList.remove('burger-menu--active');
   document.querySelector('.modal-feedback').classList.remove('modal-feedback--active');
+  document.querySelector('.modal-call').classList.remove('modal-call--active');
 });
 
 function openMenu(selectorButton, selectorMenu) {
