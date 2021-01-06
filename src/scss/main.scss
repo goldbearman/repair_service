@@ -50,7 +50,7 @@ p {
 
 //-----------------container-----------------
 
-.body--active{
+.body--active {
   overflow: hidden;
 }
 
@@ -120,6 +120,7 @@ p {
         align-items: center;
 
         &__burger {
+          display: inline-block;
           margin: 0 16px;
           background: url("../img/burger.svg") no-repeat;
 
@@ -132,17 +133,14 @@ p {
           }
         }
 
-        .divider-logo {
+
+        &__icon-logo {
+          display: inline-block;
+
           @media (min-width: 768px) {
             background: url("../img/divider.svg") no-repeat 0 10px;
             padding-left: 20px;
           }
-        }
-
-        &__icon-logo {
-          display: block;
-          width: auto;
-          min-height: 50px;
         }
       }
 
