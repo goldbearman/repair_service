@@ -21,12 +21,8 @@
 //---------------------wrapper----------------------------
 
 .wrapper {
-  //padding: 30px;
-  //min-height: 100%;
   background-color: $grey;
-  //max-width: 1120px;
   width: 100%;
-  //margin: 0 auto;
 
   &__title {
     padding: 16px;
@@ -93,7 +89,6 @@
 
       &:hover {
         background: white url("../img/labels/go--hover.svg") no-repeat 92%;
-        //filter: drop-shadow(0 5px 1px #EAEAEA);
         box-shadow: 0 5px 5px 1px #EAEAEA;
       }
     }
@@ -117,41 +112,10 @@
       width: auto;
       height: 72px;
       border-radius: 6px;
-
       margin-bottom: 16px;
-
-
       z-index: 100;
-
-
-      @media (min-width: 768px) {
-        //width: 100%;
-      }
-      @media (min-width: 1120px) {
-        //width: 100%;
-      }
-
-      //&:hover {
-      //  box-shadow: 0 5px 5px 1px #EAEAEA;
-      //}
-
-      //&:hover > .icon {
-      //  background: url("img/labels/go--hover.svg");
-      //  filter: drop-shadow(0 5px 1px #EAEAEA);
-      //}
     }
 
-    //&__image-lenovo{
-    //  //width: 100px;
-    //  //height: auto;
-    //  background: url("img/labels/lenovo.png") no-repeat 100px 50px;
-    //, white url("img/labels/go.svg") no-repeat 92%;
-    //&:hover{
-    //  background:url("img/labels/lenovo.png") no-repeat 12%
-    //  , white url("img/labels/go--hover.svg") no-repeat 92%;
-    //  filter: drop-shadow(0 5px 1px #EAEAEA);
-    //}
-    //}
     &__image-lenovo {
       background: url("../img/labels/lenovo.png") no-repeat 12%;
     }

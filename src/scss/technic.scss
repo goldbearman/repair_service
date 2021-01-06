@@ -1,5 +1,4 @@
 .technic {
-  //min-height: 100%;
   background-color: $grey;
   max-width: 1440px;
   width: 100%;
@@ -71,7 +70,6 @@
 
       &:hover {
         background: white url("../img/labels/go--hover.svg") no-repeat 92%;
-        //filter: drop-shadow(0 5px 1px #EAEAEA);
         box-shadow: 0 5px 5px 1px #EAEAEA;
       }
     }
@@ -99,9 +97,7 @@
       color: $text-all;
       padding: 16px;
 
-
       z-index: 100;
-
 
       @media (min-width: 768px) {
         //width: 100%;

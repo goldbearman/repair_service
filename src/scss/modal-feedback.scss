@@ -6,29 +6,35 @@
 
   z-index: 4;
   transition: 0.5s;
-  transform: translateX(100%);
   overflow-x: hidden;
 
   right: 0;
   top: 0;
 
-  //display: flex;
+  display: none;
   position: fixed;
 
-  &--active {
+  &-active {
+    display: block;
     overflow-x: visible;
-    transform: translateX(0%);
     box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2);
-    position: fixed;
+    animation:move_feedback 0.7s forwards;
+  }
+
+  @keyframes move_feedback {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
   }
 
   @media (min-width: 530px) {
     max-width: 430px;
-    //position: fixed;
     right: 0;
     top: 0;
   }
-
 
   &__button {
     width: 40px;

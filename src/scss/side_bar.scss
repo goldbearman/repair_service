@@ -3,18 +3,17 @@
 .burger-menu {
 
   .sidebar {
-    //z-index: 20;
 
     @media (max-width: 1439px) {
       width: 320px;
       padding: 0 24px;
-      display: flex;
+      display: none;
       position: fixed;
       left: 0;
       top: 0;
       overflow-x: hidden;
       height: 100vh;
-      transition: 0.5s;
+      transition: 1s;
       transform: translateX(-100%);
       flex-direction: column;
 
@@ -32,11 +31,22 @@
       z-index: 2;
     }
 
-    &--active {
-      transform: translateX(0%);
+    &-active {
       box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2);
+      display: flex;
+      transition: 0.5s;
+
+      animation:moveSidebar 0.7s forwards;
     }
 
+    @keyframes moveSidebar {
+      from {
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(0%);
+      }
+    }
 
     //---------------------header----------------------------
 
@@ -191,7 +201,6 @@
         }
       }
     }
-
   }
 
   .burger-menu__overlay {
@@ -204,7 +213,7 @@
     z-index: 3;
   }
 
-  &--active .burger-menu__overlay {
+  &-active .burger-menu__overlay {
     display: block;
     background-color: rgba(255, 255, 255, 0.95);
     position: fixed;
