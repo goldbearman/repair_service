@@ -52,6 +52,12 @@
       margin: 0 14px;
     }
 
+    .swiper-wrapper {
+      @media (min-width: 768px) {
+        transform: none !important;
+      }
+    }
+
     &__wrapper {
       max-height: 170px;
       padding-left: 0;

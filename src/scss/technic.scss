@@ -43,6 +43,12 @@
       }
     }
 
+    .swiper-wrapper {
+      @media (min-width: 768px) {
+        transform: none !important;
+      }
+    }
+
     .read-more-input:checked ~ .swiper-wrapper {
       max-height: none;
     }

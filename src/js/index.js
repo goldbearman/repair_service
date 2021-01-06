@@ -9,7 +9,7 @@ export const slider = document.querySelector('.swiper-container');
 export let mySwiper;
 
 export function mobileSlider() {
-  if (window.innerWidth < 768 && slider.dataset.mobile == 'false') {
+  if (window.innerWidth < 768 && slider.dataset.mobile === 'false' && mySwiper === undefined) {
     mySwiper = new Swiper('.swiper-container', {
       // If we need pagination
       pagination: {
@@ -25,18 +25,23 @@ export function mobileSlider() {
       mousewheel: {
         sensitivity: 1,
       },
+      freeMode: true,
       grabCursor: true,
       slideToClickedSlide: true,
       slidesPerView: 'auto',
     });
     slider.dataset.mobile = 'true';
-  }
-  if (window.innerWidth > 768) {
+  } else if (window.innerWidth > 768 && mySwiper !== undefined) {
     slider.dataset.mobile = 'false';
 
-    if (slider.classList.contains('swiper-container-initialized')) {
-      mySwiper.destroy;
-    }
+    // if (slider.classList.contains('swiper-container-initialized')) {
+    console.log('des');
+    mySwiper.detachEvents();
+    mySwiper.destroy(false,false);
+    mySwiper = undefined;
+    document.querySelector('.swiper-wrapper').removeAttr('style');
+    document.querySelector('.swiper-slide').removeAttr('style');
+    // }
   }
 }
 
