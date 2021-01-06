@@ -50,6 +50,9 @@ p {
 
 //-----------------container-----------------
 
+.body--active{
+  overflow: hidden;
+}
 
 .main-container {
   width: 100%;
@@ -68,14 +71,14 @@ p {
     }
 
     .content {
-      max-width: 1120px;
+      max-width: 1440px;
       //margin: 0 auto;
       height: 100vh;
       padding-top: 5px;
       background-color: $grey;
       margin-left: 320px;
 
-      @media (max-width: 1440px) {
+      @media (max-width: 1439px) {
         margin: 0 auto;
       }
     }
@@ -102,7 +105,7 @@ p {
     //-----------------header-----------------
 
     .menu {
-      max-width: 1120px;
+      max-width: 1440px;
       min-height: 88px;
       background-color: $white;
       display: flex;
@@ -257,7 +260,7 @@ p {
 
     .horizontal-tab {
       white-space: nowrap;
-      max-width: 1120px;
+      max-width: 1440px;
       overflow: auto;
       overflow-x: scroll;
       margin: 0 16px;

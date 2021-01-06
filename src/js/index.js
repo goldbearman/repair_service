@@ -1,6 +1,6 @@
 import '../scss/style.scss';
 
-import Swiper,{ Navigation, Pagination } from 'swiper';
+import Swiper, {Navigation, Pagination} from 'swiper';
 
 // configure Swiper to use modules
 Swiper.use([Navigation, Pagination]);
@@ -42,7 +42,7 @@ export function mobileSlider() {
 
 mobileSlider();
 window.addEventListener('resize', () => {
-    mobileSlider();
+  mobileSlider();
 });
 
 //------------------- Боковые меню -----------------------------------
@@ -65,6 +65,7 @@ document.querySelector('.burger-menu__overlay').addEventListener('click', functi
   document.querySelector('.burger-menu').classList.remove('burger-menu--active');
   document.querySelector('.modal-feedback').classList.remove('modal-feedback--active');
   document.querySelector('.modal-call').classList.remove('modal-call--active');
+  document.querySelector('body').classList.remove('body--active');
 });
 
 function openMenu(selectorButton, selectorMenu) {
@@ -74,6 +75,7 @@ function openMenu(selectorButton, selectorMenu) {
     evnt.preventDefault();
     document.querySelector(selectorMenu).classList.add(selectorMenuActive);
     document.querySelector('.burger-menu').classList.add('burger-menu--active');
+    document.querySelector('body').classList.add('body--active');
   })
 }
 
@@ -84,6 +86,7 @@ function closeMenu(selectorButton, selectorMenu) {
     evnt.preventDefault();
     document.querySelector(selectorMenu).classList.remove(selectorMenuActive);
     document.querySelector('.burger-menu').classList.remove('burger-menu--active');
+    document.querySelector('body').classList.remove('body--active');
   })
 }
 
