@@ -1489,7 +1489,7 @@ p {
       margin-top: -65px;
       position: absolute;
       color: #7E7E82; }
-      @media (max-width: 768px) {
+      @media (max-width: 767px) {
         .price .price-slider .table-head {
           display: none; } }
     .price .price-slider .swiper-pagination {
