@@ -1066,12 +1066,12 @@ p {
     .burger-menu .sidebar .sidebar-nav .sidebar-menu a:hover {
       color: #FF3E79;
       transform: scale(1.2) translateX(30px); }
-  .burger-menu .sidebar .sidebar-nav .sidebar-menu--active a {
+  .burger-menu .sidebar .sidebar-nav .sidebar-menu__item--active a {
     margin-left: -24px;
     background: url(./static/highlight-sidebar.svg) no-repeat 0 12px;
     padding-left: 24px;
     color: #7E7E82; }
-    .burger-menu .sidebar .sidebar-nav .sidebar-menu--active a:hover {
+    .burger-menu .sidebar .sidebar-nav .sidebar-menu__item--active a:hover {
       transform: none;
       color: #7E7E82; }
 
