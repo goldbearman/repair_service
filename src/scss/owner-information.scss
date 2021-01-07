@@ -17,23 +17,24 @@
   &__items {
     width: 30%;
     padding-bottom: 16px;
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       width: 100%;
       text-align: center;
     }
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     flex-direction: column;
   }
 
   &__confidentiality{
       text-align: center;
+
   }
 
   &__availability{
     text-align: right;
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       width: 100%;
       text-align: center;
     }

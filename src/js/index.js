@@ -2,13 +2,18 @@ import '../scss/style.scss';
 
 import Swiper, {Navigation, Pagination} from 'swiper';
 
+// import 'swiper/swiper-bundle.css';
+
 // configure Swiper to use modules
 Swiper.use([Navigation, Pagination]);
 
-export const slider = document.querySelector('.swiper-container');
-export let mySwiper;
+const slider = document.querySelector('.swiper-container');
+let mySwiper;
 
-export function mobileSlider() {
+function mobileSlider() {
+
+  'use strict';
+
   if (window.innerWidth < 768 && slider.dataset.mobile === 'false' && mySwiper === undefined) {
     mySwiper = new Swiper('.swiper-container', {
       // If we need pagination
@@ -31,17 +36,18 @@ export function mobileSlider() {
       slidesPerView: 'auto',
     });
     slider.dataset.mobile = 'true';
+    slider.dataset.mobile = 'true';
   } else if (window.innerWidth > 768 && mySwiper !== undefined) {
     slider.dataset.mobile = 'false';
 
-    // if (slider.classList.contains('swiper-container-initialized')) {
     console.log('des');
-    mySwiper.detachEvents();
-    mySwiper.destroy(false,false);
+    // mySwiper.detachEvents();
+    // mySwiper.destroy();
+    mySwiper.destroy;
+    console.log(mySwiper);
     mySwiper = undefined;
-    document.querySelector('.swiper-wrapper').removeAttr('style');
-    document.querySelector('.swiper-slide').removeAttr('style');
-    // }
+    // document.querySelector('.swiper-wrapper').removeAttr('style');
+    // document.querySelector('.swiper-slide').removeAttr('style');
   }
 }
 
