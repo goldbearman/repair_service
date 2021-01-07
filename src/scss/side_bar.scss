@@ -112,15 +112,18 @@
           }
         }
 
-        &--active a {
-          margin-left: -24px;
-          background: url("../img/highlight-sidebar.svg") no-repeat 0 12px;
-          padding-left: 24px;
-          color: $text;
+        &__item {
 
-          &:hover {
-            transform: none;
+          &--active a {
+            margin-left: -24px;
+            background: url("../img/highlight-sidebar.svg") no-repeat 0 12px;
+            padding-left: 24px;
             color: $text;
+
+            &:hover {
+              transform: none;
+              color: $text;
+            }
           }
         }
       }
