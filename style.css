@@ -733,6 +733,8 @@ p {
         .main-container .container .horizontal-tab__item--active {
           border: 2px solid #B8FFEC;
           background-color: #FFFFFF; }
+          .main-container .container .horizontal-tab__item--active:hover {
+            border: 2px solid #B8FFEC; }
     .main-container .container .text-image-position {
       margin-top: 16px; }
     @media (min-width: 768px) {
