@@ -1,6 +1,6 @@
 //---------------------sidebar----------------------------
 
-.burger-menu {
+.sidebar-container {
 
   .sidebar {
 
@@ -11,7 +11,6 @@
       position: fixed;
       left: 0;
       top: 0;
-      overflow-x: hidden;
       height: 100vh;
       transition: 1s;
       transform: translateX(-100%);
@@ -20,6 +19,7 @@
       background: $white;
       z-index: 4;
     }
+
     @media (min-width: 1440px) {
       display: flex;
       width: 320px;
@@ -28,28 +28,11 @@
       padding: 0 24px;
       flex-direction: column;
       background: $white;
-      z-index: 2;
+      z-index: 4;
     }
 
     @media (max-width: 360px) {
       width: 100%;
-    }
-
-    &-active {
-      box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2);
-      display: flex;
-      transition: 0.5s;
-
-      animation:moveSidebar 0.7s forwards;
-    }
-
-    @keyframes moveSidebar {
-      from {
-        transform: translateX(-100%);
-      }
-      to {
-        transform: translateX(0%);
-      }
     }
 
     //---------------------header----------------------------
@@ -81,8 +64,10 @@
           text-decoration: none;
         }
       }
-      .icon-search{
-        background: url("../img/search.svg");     }
+
+      .icon-search {
+        background: url("../img/search.svg");
+      }
 
     }
 
@@ -90,10 +75,13 @@
 
     .sidebar-nav {
 
+      .sidebar-menu-position {
+        margin: 0;
+      }
+
       .sidebar-menu {
 
         background-color: $white;
-        margin: 0;
         padding: 0;
         list-style: none;
         font-size: 16px;
@@ -148,11 +136,13 @@
           margin-right: 14px;
           background: url("../img/chat.svg");
         }
+
         &__profile {
           display: inline-block;
           margin-right: 14px;
           background: url("../img/profile.svg");
         }
+
         &__call {
           display: inline-block;
           margin-right: 14px;
@@ -210,7 +200,7 @@
     }
   }
 
-  .burger-menu__overlay {
+  &__overlay {
     display: none;
     position: fixed;
     top: 0;
@@ -220,13 +210,26 @@
     z-index: 3;
   }
 
-  &-active .burger-menu__overlay {
+  &-active .sidebar-container__overlay {
     display: block;
     background-color: rgba(255, 255, 255, 0.95);
-    position: fixed;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 3;
+  }
+
+  &-active .sidebar {
+    box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2);
+    display: flex;
+    transition: 0.5s;
+    animation: moveSidebar 0.7s forwards;
+  }
+
+  @keyframes moveSidebar {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
   }
 }
+
+

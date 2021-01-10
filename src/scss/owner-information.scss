@@ -1,3 +1,7 @@
+.owner-information-position{
+  margin: 0 auto ;
+}
+
 .owner-information {
   background-color: $grey;
   max-width: 1440px;
@@ -6,7 +10,6 @@
   align-items: center;
   font-size: 14px;
   color: $text;
-  margin: 0 auto ;
   padding: 47px 32px 15px;
 
   @media (min-width: 768px) {

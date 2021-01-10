@@ -62,7 +62,6 @@ p {
 
   .container {
     display: flex;
-    //justify-content: center;
     max-width: 1440px;
     margin: 0 auto;
 
@@ -227,13 +226,16 @@ p {
         }
       }
 
-      .repair-link {
+      .repair-link-position {
         display: none;
 
         @media (min-width: 1440px) {
           display: block;
           margin-right: 32px;
         }
+      }
+
+      .repair-link {
 
         & a {
           padding: 10px 60px 10px 24px;
@@ -256,17 +258,20 @@ p {
       }
     }
 
+    .horizontal-tab horizontal-tab-position {
+      margin: 0 16px;
+      @media (min-width: 768px) {
+        margin: 0 24px;
+      }
+    }
+
     .horizontal-tab {
       white-space: nowrap;
       max-width: 1440px;
       overflow: auto;
       overflow-x: scroll;
-      margin: 0 16px;
       padding: 0;
 
-      @media (min-width: 768px) {
-        margin: 0 24px;
-      }
 
       @media (min-width: 1120px) {
         overflow: hidden;
@@ -299,9 +304,11 @@ p {
       }
     }
 
-    .text-image {
+    .text-image-position {
       margin-top: 16px;
+    }
 
+    .text-image {
       @media (min-width: 768px) {
         display: flex;
       }

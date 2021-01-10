@@ -13,83 +13,85 @@
 
   <div class="container">
 
-    <div class="burger-menu ">
-      <div class="sidebar">
+      <div class="sidebar-container">
+        <div class="sidebar">
 
-        <header class="header">
-          <div class="burger-logo">
-            <a href="#" class="icon burger-logo__item"></a>
-            <a class="burger-logo__logo" href="#"><img class="logo" src="img/brand.svg"
-                                                       alt="Логотип компании"></a>
-
-          </div>
-          <a href="#" class="icon icon-search"></a>
-        </header>
-
-        <main class="sidebar-nav">
-          <nav>
-            <ul class="sidebar-menu">
-              <li class="sidebar-menu__item"><a href="#">Ремонт техники</a>
-              </li>
-              <li class="sidebar-menu__item sidebar-menu__item--active"><a href="#">Услуги и сервисы</a></li>
-              <li class="sidebar-menu__item"><a href="#">Корпоративным клиентам</a></li>
-              <li class="sidebar-menu__item"><a href="#">Продавцам техники</a></li>
-              <li class="sidebar-menu__item"><a href="#">Партнерам</a></li>
-              <li class="sidebar-menu__item"><a href="#">Производителям</a></li>
-              <li class="sidebar-menu__item"><a href="#">Наши сервисные центры</a></li>
-              <li class="sidebar-menu__item"><a href="#">Контакты</a></li>
-            </ul>
-          </nav>
-        </main>
-
-        <footer class="footer">
-          <div class="contact-icons footer__contact-icons">
-            <a href="#" class="icon contact-icons__call"></a>
-
-            <a href="#" class="icon contact-icons__chat"></a>
-
-            <a href="#" class="icon contact-icons__profile"></a>
-          </div>
-
-          <a href="mailto:mail@cps.com" class="footer__mail">mail@cps.com</a>
-          <a href="tel:88008908900" class="footer__phone">8 800 890 8900</a>
-
-          <div class="languages">
-            <div class="languages__button languages__russian">
-              <input type="radio" name="language" id="russian" checked>
-              <label for="russian">ru</label>
+          <header class="header">
+            <div class="burger-logo">
+              <a href="#" class="icon burger-logo__item"></a>
+              <a class="burger-logo__logo" href="#"><img class="logo" src="img/brand.svg"
+                                                         alt="Логотип компании"></a>
             </div>
-            <div class="languages__button languages__english">
-              <input type="radio" name="language" id="english">
-              <label for="english">en</label>
-            </div>
-            <div class="languages__button languages__chinese">
-              <input type="radio" name="language" id="chinese">
-              <label for="chinese">ch</label>
+            <a href="#" class="icon icon-search"></a>
+          </header>
+          <div class="sidebar-nav sidebar-nav-position">
+            <nav>
+              <ul class="sidebar-menu sidebar-menu-position">
+                <li class="sidebar-menu__item"><a href="#">Ремонт техники</a>
+                </li>
+                <li class="sidebar-menu__item sidebar-menu__item--active"><a href="#">Услуги и сервисы</a></li>
+                <li class="sidebar-menu__item"><a href="#">Корпоративным клиентам</a></li>
+                <li class="sidebar-menu__item"><a href="#">Продавцам техники</a></li>
+                <li class="sidebar-menu__item"><a href="#">Партнерам</a></li>
+                <li class="sidebar-menu__item"><a href="#">Производителям</a></li>
+                <li class="sidebar-menu__item"><a href="#">Наши сервисные центры</a></li>
+                <li class="sidebar-menu__item"><a href="#">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+          <footer class="footer">
+            <div class="contact-icons footer__contact-icons">
+              <a href="#" class="icon contact-icons__call"></a>
+              <a href="#" class="icon contact-icons__chat"></a>
+              <a href="#" class="icon contact-icons__profile"></a>
             </div>
 
-          </div>
-        </footer>
+            <a href="mailto:mail@cps.com" class="footer__mail">mail@cps.com</a>
+            <a href="tel:88008908900" class="footer__phone">8 800 890 8900</a>
+
+            <div class="languages">
+              <div class="languages__button languages__russian">
+                <input type="radio" name="language" id="russian" checked>
+                <label for="russian">ru</label>
+              </div>
+              <div class="languages__button languages__english">
+                <input type="radio" name="language" id="english">
+                <label for="english">en</label>
+              </div>
+              <div class="languages__button languages__chinese">
+                <input type="radio" name="language" id="chinese">
+                <label for="chinese">ch</label>
+              </div>
+
+            </div>
+          </footer>
+        </div>
+        <div class="sidebar-container__overlay"></div>
       </div>
 
-      <div class="modal-feedback ">
-        <button class="modal-feedback__button"></button>
-        <div class="modal-feedback__title">Обратная связь</div>
-        <form action="/" method="post" class="form-grope">
-          <input type="text" class="form-grope__input" placeholder="Имя">
-          <input type="tel" class="form-grope__input" placeholder="Телефон">
-          <input type="email" class="form-grope__input" placeholder="Электронная почта">
-          <textarea type="text" class="form-grope__textarea" placeholder="Сообщение"></textarea>
-          <p>Нажимая “отправить”, вы даете согласие на <span>обработку персональных данных</span> и соглашаетесь с нашей
-            <span>политикой
+      <div class="modal-feedback-container">
+        <div class="modal-feedback modal-feedback-position">
+          <button class="modal-feedback__button"></button>
+          <div class="modal-feedback__title">Обратная связь</div>
+          <form action="/" method="post" class="form-grope">
+            <input type="text" class="form-grope__input" placeholder="Имя">
+            <input type="tel" class="form-grope__input" placeholder="Телефон">
+            <input type="email" class="form-grope__input" placeholder="Электронная почта">
+            <textarea class="form-grope__textarea" placeholder="Сообщение"></textarea>
+            <p>Нажимая “отправить”, вы даете согласие на <span>обработку персональных данных</span> и соглашаетесь с
+              нашей
+              <span>политикой
 				конфиденциальности</span></p>
-          <div class="form-grope__button-container">
-            <button type="submit" class="form-button">Отправить</button>
-          </div>
-        </form>
+            <div class="form-grope__button-container">
+              <button type="submit" class="form-button">Отправить</button>
+            </div>
+          </form>
+        </div>
+        <div class="modal-feedback-container__overlay"></div>
       </div>
 
-      <div class="modal-call ">
+      <div class="modal-call-container">
+      <div class="modal-call modal-call-position">
         <button class="modal-call__button"></button>
         <div class="modal-call__title">Заказать звонок</div>
         <form action="/" method="post" class="form-grope">
@@ -104,17 +106,15 @@
           </div>
         </form>
       </div>
-
-      <div class="burger-menu__overlay"></div>
-
-    </div>
+        <div class="modal-call-container__overlay"></div>
+      </div>
 
     <div class="content">
       <header>
         <nav class="menu">
           <div class="sidebar-logo">
             <a class="icon sidebar-logo__burger" href="#"></a>
-            <a href="#" class="sidebar-logo__icon-logo"><img  src="img/brand.svg" alt="Логотип компании"></a>
+            <a href="#" class="sidebar-logo__icon-logo"><img src="img/brand.svg" alt="Логотип компании"></a>
           </div>
 
           <div class="contact-repair">
@@ -136,13 +136,13 @@
           <div class="title">
             <h1>Услуги и сервисы</h1>
           </div>
-          <div class="repair-link">
+          <div class="repair-link repair-link-position">
             <a class="repair-link__repair" href="#">Оставить заявку</a>
             <a class="repair-link__checkstatus" href="#">Статус ремонта</a>
           </div>
         </div>
         <nav>
-          <ul class="horizontal-tab">
+          <ul class="horizontal-tab horizontal-tab-position">
             <li><a href="#" class="horizontal-tab__item horizontal-tab__item--active">Ремонтируемые бренды</a>
             </li>
             <li><a href="#" class="horizontal-tab__item">Ремонтируемые устройства</a></li>
@@ -152,7 +152,7 @@
             <li><a href="#" class="horizontal-tab__item">Отзывы</a></li>
           </ul>
         </nav>
-        <div class="text-image">
+        <div class="text-image text-image-position">
           <div class="text-image__text">
             <p>Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
               отремонтировать свой ноутбук Dell с официальной гарантией производителя.<br/><br/>
@@ -174,9 +174,9 @@
         </div>
       </main>
 
-      <section class="wrapper">
+      <section class="wrapper slider-template">
 
-        <div class="wrapper__title">Ремонт техники различных брендов</div>
+        <h2 class="h2-title wrapper__title ">Ремонт техники различных брендов</h2>
         <!-- Slider main container -->
         <div class="image-slider swiper-container" data-mobile='false'>
           <!-- Additional required wrapper -->
@@ -226,14 +226,11 @@
           <div class="swiper-pagination"></div>
 
           <label class="read-more" for="show-hide"></label>
-
         </div>
-
       </section>
 
-
-      <section class="technic">
-        <div class="technic__title">Ремонт различных видов техники</div>
+      <section class="technic slider-template">
+        <h2 class="h2-title technic__title">Ремонт различных видов техники</h2>
         <!-- Slider main container -->
         <div class="technic-slider swiper-container" data-mobile='false'>
           <!-- Additional required wrapper -->
@@ -243,59 +240,59 @@
           <ul class="technic-slider__wrapper swiper-wrapper">
             <!-- Slides -->
             <li class="technic-slider__slide swiper-slide">
-              <a href="#" class="technic-slider__image image-slider__note">
+              <a href="#" class="technic-slider__image technic-note">
                 Ремонт ноутбуков
               </a>
             </li>
             <li class="technic-slider__slide swiper-slide">
-              <a href="#" class="technic-slider__image image-slider__pad">
+              <a href="#" class="technic-slider__image technic-pad">
                 Ремонт планшетов
               </a>
 
             </li>
             <li class="technic-slider__slide swiper-slide">
-              <a href="#" class="technic-slider__image image-slider__pc">
+              <a href="#" class="technic-slider__image technic-pc">
                 Ремонт ПК
               </a>
             </li>
             <li class="technic-slider__slide swiper-slide">
-              <a href="#" class="technic-slider__image image-slider__monitor">
+              <a href="#" class="technic-slider__image technic-monitor">
                 Ремонт мониторов
               </a>
             </li>
             <li class="technic-slider__slide swiper-slide">
-              <a href="#" class="technic-slider__image image-slider__headphones">
+              <a href="#" class="technic-slider__image technic-_headphones">
                 Ремонт наушников
               </a>
             </li>
             <li class="technic-slider__slide swiper-slide ">
-              <a href="#" class="technic-slider__image image-slider__phone">
+              <a href="#" class="technic-slider__image technic-phone">
                 Ремонт телефонов
               </a>
             </li>
             <li class="technic-slider__slide swiper-slide">
-              <a href="#" class="technic-slider__image image-slider__tv">
+              <a href="#" class="technic-slider__image technic-tv">
                 Ремонт телевизоров
               </a>
             </li>
             <li class="technic-slider__slide swiper-slide">
-              <a href="#" class="technic-slider__image image-slider__coffee-machine">
+              <a href="#" class="technic-slider__image technic-coffee-machine">
                 Ремонт кофемашин
               </a>
             </li>
             <li class="technic-slider__slide swiper-slide">
-              <a href="#" class="technic-slider__image image-slider__fridge">
+              <a href="#" class="technic-slider__image technic-fridge">
                 Ремонт холодильников
               </a>
             </li>
             <li class="technic-slider__slide swiper-slide">
-              <a href="#" class="technic-slider__image image-slider__smart-watch">
+              <a href="#" class="technic-slider__image technic-smart-watch">
                 Ремонт умных часов
               </a>
 
             </li>
             <li class="technic-slider__slide swiper-slide">
-              <a href="#" class="technic-slider__image image-slider__vacuum-cleaner">
+              <a href="#" class="technic-slider__image technic-vacuum-cleaner">
                 Ремонт пылесосов
               </a>
             </li>
@@ -311,8 +308,8 @@
 
       </section>
 
-      <section class="price">
-        <div class="price__title">Ремонт различных видов техники</div>
+      <section class="price slider-template">
+        <h2 class="h2-title price__title">Ремонт различных видов техники</h2>
         <!-- Slider main container -->
         <div class="price-slider swiper-container" data-mobile='false'>
           <!-- Additional required wrapper -->
@@ -382,7 +379,7 @@
         </div>
 
       </section>
-      <footer class="owner-information">
+      <footer class="owner-information owner-information-position">
         <div class="owner-information__items owner-information__year-creator">
           © 2019 CPS <br>
           Разработано командой Apesong

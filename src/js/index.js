@@ -2,9 +2,6 @@ import '../scss/style.scss';
 
 import Swiper, {Navigation, Pagination} from 'swiper';
 
-// import 'swiper/swiper-bundle.css';
-
-// configure Swiper to use modules
 Swiper.use([Navigation, Pagination]);
 
 const slider = document.querySelector('.swiper-container');
@@ -39,15 +36,10 @@ function mobileSlider() {
     slider.dataset.mobile = 'true';
   } else if (window.innerWidth > 768 && mySwiper !== undefined) {
     slider.dataset.mobile = 'false';
-
-    console.log('des');
-    // mySwiper.detachEvents();
-    // mySwiper.destroy();
-    mySwiper.destroy;
-    console.log(mySwiper);
+    for (let i = 0; i < mySwiper.length; i++) {
+      mySwiper[i].destroy();
+    }
     mySwiper = undefined;
-    // document.querySelector('.swiper-wrapper').removeAttr('style');
-    // document.querySelector('.swiper-slide').removeAttr('style');
   }
 }
 
@@ -59,25 +51,20 @@ window.addEventListener('resize', () => {
 //------------------- Боковые меню -----------------------------------
 
 
-openMenu('.sidebar-logo__burger', '.sidebar');
-openMenu('.contact-icons__call', '.modal-call');
-openMenu('.contact-icons__chat', '.modal-feedback');
-openMenu('.contact__chat', '.modal-feedback');
-openMenu('.contact__call', '.modal-call');
+openMenu('.sidebar-logo__burger', '.sidebar-container');
+openMenu('.contact-icons__call', '.modal-call-container');
+openMenu('.contact-icons__chat', '.modal-feedback-container');
+openMenu('.contact__chat', '.modal-feedback-container');
+openMenu('.contact__call', '.modal-call-container');
 
-closeMenu('.burger-logo__item', '.sidebar');
-closeMenu('.modal-feedback__button', '.modal-feedback');
-closeMenu('.modal-call__button', '.modal-call');
+closeMenu('.burger-logo__item', '.sidebar-container');
+closeMenu('.sidebar-container__overlay', '.sidebar-container');
 
+closeMenu('.modal-feedback__button', '.modal-feedback-container');
+closeMenu('.modal-feedback-container__overlay', '.modal-feedback-container');
 
-document.querySelector('.burger-menu__overlay').addEventListener('click', function (evnt) {
-  evnt.preventDefault();
-  document.querySelector('.sidebar').classList.remove('sidebar-active');
-  document.querySelector('.burger-menu').classList.remove('burger-menu-active');
-  document.querySelector('.modal-feedback').classList.remove('modal-feedback-active');
-  document.querySelector('.modal-call').classList.remove('modal-call-active');
-  document.querySelector('body').classList.remove('body-active');
-});
+closeMenu('.modal-call__button', '.modal-call-container');
+closeMenu('.modal-call-container__overlay', '.modal-call-container');
 
 function openMenu(selectorButton, selectorMenu) {
   let selectorMenuActive = selectorMenu.trim() + '-active';
@@ -85,7 +72,6 @@ function openMenu(selectorButton, selectorMenu) {
   document.querySelector(selectorButton).addEventListener('click', function (evnt) {
     evnt.preventDefault();
     document.querySelector(selectorMenu).classList.add(selectorMenuActive);
-    document.querySelector('.burger-menu').classList.add('burger-menu-active');
     document.querySelector('body').classList.add('body-active');
   })
 }
@@ -96,7 +82,6 @@ function closeMenu(selectorButton, selectorMenu) {
   document.querySelector(selectorButton).addEventListener('click', function (evnt) {
     evnt.preventDefault();
     document.querySelector(selectorMenu).classList.remove(selectorMenuActive);
-    document.querySelector('.burger-menu').classList.remove('burger-menu-active');
     document.querySelector('body').classList.remove('body-active');
   })
 }
