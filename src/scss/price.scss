@@ -211,11 +211,15 @@
   }
 
   &__explanation {
-    max-width: 421px;
-    margin-left: 32px;
+    max-width: 450px;
+    padding-left: 32px;
 
+    @media (max-width: 767px) {
+      padding:0 16px;
+    }
     & p {
       font-size: 14px;
+      line-height: 20px;
     }
 
     & a {
