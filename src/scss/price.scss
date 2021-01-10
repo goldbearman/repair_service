@@ -45,12 +45,6 @@
       }
     }
 
-    //.swiper-wrapper {
-    //  @media (min-width: 768px) {
-    //    transform: none !important;
-    //  }
-    //}
-
     .read-more-input:checked ~ .swiper-wrapper {
       max-height: none;
     }
@@ -229,7 +223,6 @@
       text-decoration: none;
       font-weight: 500;
       color: $text-all;
-      //background: url("../img/more.png") no-repeat 98%;
       transition-duration: 0.3s;
 
       &:hover {
