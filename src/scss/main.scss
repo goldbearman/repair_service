@@ -59,7 +59,6 @@ p {
   height: 100vh;
   background-color: $grey;
 
-
   .container {
     display: flex;
     max-width: 1440px;
@@ -131,7 +130,6 @@ p {
             fill: #B8FFEC;
           }
         }
-
 
         &__icon-logo {
           display: inline-block;
@@ -258,7 +256,7 @@ p {
       }
     }
 
-    .horizontal-tab horizontal-tab-position {
+    .horizontal-tab-position {
       margin: 0 16px;
       @media (min-width: 768px) {
         margin: 0 24px;

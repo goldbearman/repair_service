@@ -229,11 +229,18 @@
       text-decoration: none;
       font-weight: 500;
       color: $text-all;
-      background: url("../img/more.png") no-repeat 98%;
+      //background: url("../img/more.png") no-repeat 98%;
       transition-duration: 0.3s;
 
       &:hover {
         color: $text-hover;
+      }
+
+      & span{
+        width: 20px;
+        height: 10px;
+        display: inline-block;
+        background: url("../img/more.png") no-repeat 98%;
       }
     }
   }
